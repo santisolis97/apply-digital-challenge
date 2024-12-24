@@ -29,6 +29,19 @@ const config: Config = {
         'cta-stroke-primary': '#3B3B3B',
         'text-item-fill': '#3B3B3B',
       },
+      animation: {
+        shimmer: 'shimmer 10s infinite',
+      },
+      keyframes: {
+        shimmer: {
+          '0%': {
+            backgroundPosition: '-1000px 0',
+          },
+          '100%': {
+            backgroundPosition: '1000px 0',
+          },
+        },
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
