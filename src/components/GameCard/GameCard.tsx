@@ -33,7 +33,15 @@ export const GameCard = ({ game }: GameCardProps) => {
     <div className='rounded-2xl p-6 border-[0.5px] border-stroke-secondary '>
       <div className='flex flex-col gap-5 h-full '>
         <div className='relative w-full h-60 rounded-t-2xl overflow-hidden '>
-          <Image src={game.image} alt={game.name} fill priority={true} />
+          <Image
+            src={game.image}
+            alt={game.name}
+            priority={true}
+            width='0'
+            height='0'
+            sizes='100vw'
+            className='w-full h-full object-cover'
+          />
         </div>
         <div className='flex flex-col flex-1 justify-between gap-22'>
           <div className='flex flex-col gap-3'>
