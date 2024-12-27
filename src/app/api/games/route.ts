@@ -1,10 +1,17 @@
 import { allGames, availableFilters, delay } from '@/utils/endpoint';
 
-const ITEMS_PER_PAGE = 12;
+// Adding this export to make it available to the test.
+export const ITEMS_PER_PAGE = 12;
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
+
   const genre = searchParams.get('genre');
+
+  if (genre && !availableFilters.includes(genre)) {
+    return new Response('No such genre', { status: 500 });
+  }
+
   let page = parseInt(searchParams.get('page') ?? '1');
 
   let games = allGames;
