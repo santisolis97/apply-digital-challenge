@@ -1,7 +1,55 @@
-# Frontend Technical Test
+# Santiago Solis Test Project
 
-Welcome to the Frontend Technical Test! This test is designed to assess your knowledge and skills in frontend development.
+## Overview
 
-The detailed instructions and requirements for this test are defined in the [`CHALLENGE.md`](/CHALLENGE.md) file. Please read it carefully before you start.
+This is a Next.js project using React, Zustand for state management, and Jest for testing. It is styled with TailwindCSS and uses TypeScript for type safety.
 
-Good luck!
+## Dependencies
+
+- **Next.js**: v14.2.21
+- **React**: v18.3.1
+- **React DOM**: v18.3.1
+- **Zustand**: v5.0.2
+
+## Dev Dependencies
+
+- **Testing Libraries**:
+  - `@testing-library/dom`: v10.4.0
+  - `@testing-library/jest-dom`: v6.6.3
+  - `@testing-library/react`: v16.1.0
+  - `@testing-library/user-event`: v14.5.2
+  - `jest-environment-jsdom`: v29.7.0
+- **TypeScript**: v5
+- **ESLint**: v8
+- **TailwindCSS**: v3.4.4
+- **PostCSS**: v8
+- **Autoprefixer**: v10.0.1
+- **Jest**: v29.7.0
+- **ts-node**: v10.9.2
+- **whatwg-fetch**: v3.6.20
+- **@types/jest**: v29.5.14
+- **@types/node**: v20.14.8
+- **@types/react**: v18.3.3
+- **@types/react-dom**: v18.3.0
+
+## Scripts
+
+- **dev**: `next dev` — Starts the development server.
+- **build**: `next build` — Builds the application for production.
+- **start**: `next start` — Runs the production build.
+- **lint**: `next lint` — Lints the project using ESLint.
+- **test**: `jest` — Runs the Jest tests.
+
+## Setup
+
+1. Clone the repository.
+2. Run `npm install` or `yarn install` to install the dependencies.
+3. Run `npm run dev` or `yarn dev` to start the development server.
+
+## Testing
+
+To run the tests, use:
+
+```bash
+npm run test
+```
