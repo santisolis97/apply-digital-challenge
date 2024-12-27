@@ -8,8 +8,9 @@ type BackProps = {
 
 export const Back = ({ backTo, href }: BackProps) => {
   return (
-    <Link href={href} className='flex gap-2 hover:opacity-70 py-6'>
+    <Link href={href} className='flex w-fit gap-2 hover:opacity-70 py-6'>
       <svg
+        role='img'
         width='24'
         height='24'
         viewBox='0 0 24 24'

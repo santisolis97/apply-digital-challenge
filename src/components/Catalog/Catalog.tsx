@@ -17,17 +17,15 @@ export async function Catalog({ page, genre }: CatalogProps) {
   try {
     data = await fetchGames(page, genre);
   } catch (err) {
-    console.error('Error fetching games:', err);
     error = 'Failed to load games. Please try again later.';
     reason = err instanceof Error ? err.message : 'Unknown error';
   }
 
-  // If there was an error, return an error UI
   if (error) {
     return (
       <div className='flex gap-3 w-fit px-4 flex-col mx-auto md:max-w-screen-desktop-xl max-w-screen-mobile border rounded-lg py-4 border-stroke-secondary'>
-        <h2>{error}</h2>
-        <h2>{reason}</h2>
+        <h2>Error: {error}</h2>
+        <h2>Reason: {reason}</h2>
         <div className='mt-12'>
           <LinkButton
             href={`/`}

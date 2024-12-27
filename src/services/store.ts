@@ -20,7 +20,7 @@ export const useCartStore = create<CartStore>()(
         })),
     }),
     {
-      name: 'bear-storage',
+      name: 'cart-store',
     }
   )
 );

@@ -20,7 +20,6 @@ export const Filter = ({ genres, selectedGenre }: FilterProps) => {
     <div className='flex gap-6 w-full justify-end items-center'>
       <h3 className='text-xl text-bold text-cta-content-secondary'>Genre</h3>
       <div className='w-0.5 h-6 bg-stroke-secondary' />
-
       <select className='w-40' value={selectedGenre} onChange={handleSelect}>
         <option value=''>All</option>
         {genres.map((genre) => (

@@ -8,7 +8,7 @@ const NotFoundPage = () => {
       <div className='text-center'>
         <h1 className='text-9xl font-extrabold text-gray-800'>404</h1>
         <p className='text-xl text-gray-600 mt-4'>
-          Oops! The page you are looking for doesn't exist.
+          Oops! The page you are looking for doesn&apos;t exist.
         </p>
         <div className='mt-6'>
           <Link

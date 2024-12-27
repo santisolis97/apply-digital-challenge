@@ -10,7 +10,8 @@ export const apiClient = async (endpoint: string, options?: RequestInit) => {
     },
   });
   if (!res.ok) {
-    throw new Error(`There was an error. Please try again later`);
+    const resJson = await res.text();
+    throw new Error(resJson);
   }
   return res.json();
 };

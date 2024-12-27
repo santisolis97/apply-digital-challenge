@@ -10,6 +10,7 @@ export const Footer = () => {
           alt='logo'
           height={0}
           priority
+          role='img'
           width={0}
           className='h-[44px] w-[170px]'
         />

@@ -1,14 +1,17 @@
 import { allGames, availableFilters, delay } from '@/utils/endpoint';
+import { ITEMS_PER_PAGE } from './utils';
 
 // Adding this export to make it available to the test.
-export const ITEMS_PER_PAGE = 12;
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
 
   const genre = searchParams.get('genre');
 
-  if (genre && !availableFilters.includes(genre)) {
+  if (
+    genre &&
+    !availableFilters.map((g) => g.toLowerCase()).includes(genre.toLowerCase())
+  ) {
     return new Response('No such genre', { status: 500 });
   }
 
@@ -27,7 +30,7 @@ export async function GET(request: Request) {
   // Mock a delay to simulate a real API
   await delay(2000);
 
-  //CHANGE BY SANTI SOLIS: changed totalPage calculation to get the total number of results and not allGames
+  // CHANGE BY SANTI SOLIS: changed totalPage calculation to get the total number of results and not allGames
   const totalResults = games.length;
   const totalPages = Math.ceil(totalResults / ITEMS_PER_PAGE);
 
