@@ -1,5 +1,7 @@
+'use client';
+import { useCartStore } from '@/services/store';
 import Link from 'next/link';
-import ReactComponent from '/cart.svg';
+import { useShallow } from 'zustand/shallow';
 
 type CartIconProps = {
   color?: string;
@@ -7,8 +9,21 @@ type CartIconProps = {
 };
 
 const CartIcon = ({ color = '#585660', href = '/cart' }: CartIconProps) => {
+  const { cartGames } = useCartStore(
+    useShallow((state) => ({
+      cartGames: state.cartGames,
+    }))
+  );
   return (
-    <Link href={href} passHref title='Cart' className='hover:opacity-70'>
+    <Link
+      href={href}
+      passHref
+      title='Cart'
+      className='hover:opacity-70 relative'
+    >
+      <span className='absolute bottom-[-10px] left-[-10px] bg-red-500 text-white rounded-full w-4 h-4 flex justify-center items-center text-xs'>
+        {cartGames.length}
+      </span>
       <svg
         width='20'
         height='22'

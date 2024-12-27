@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a Next.js project using React, Zustand for state management, and Jest for testing. It is styled with TailwindCSS and uses TypeScript for type safety.
+This is a Next.js project using NextJS React, Zustand for state management, and Jest for testing. It is styled with TailwindCSS and uses TypeScript for type safety.
 
 ## Dependencies
 
@@ -34,17 +34,17 @@ This is a Next.js project using React, Zustand for state management, and Jest fo
 
 ## Scripts
 
-- **dev**: `next dev` — Starts the development server.
-- **build**: `next build` — Builds the application for production.
-- **start**: `next start` — Runs the production build.
-- **lint**: `next lint` — Lints the project using ESLint.
-- **test**: `jest` — Runs the Jest tests.
+- **dev**: `npm run dev` — Starts the development server.
+- **build**: `npm run build` — Builds the application for production.
+- **start**: `npm run start` — Runs the production build.
+- **lint**: `npm run lint` — Lints the project using ESLint.
+- **test**: `npm run test` — Runs the Jest tests.
 
 ## Setup
 
 1. Clone the repository.
-2. Run `npm install` or `yarn install` to install the dependencies.
-3. Run `npm run dev` or `yarn dev` to start the development server.
+2. Run `npm install` to install the dependencies.
+3. Run `npm run dev` to start the development server.
 
 ## Testing
 

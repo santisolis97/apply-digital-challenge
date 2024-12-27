@@ -17,11 +17,11 @@ export default async function Page({ searchParams }: PageProps) {
         </h2>
       </div>
 
-      <div className='py-12'>
+      <section className='py-12'>
         <Suspense key={`${page}-${genre}`} fallback={<CatalogSkeleton />}>
           <Catalog page={page} genre={genre} />
         </Suspense>
-      </div>
+      </section>
     </div>
   );
 }

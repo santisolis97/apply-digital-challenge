@@ -23,6 +23,11 @@ export const CartGameCard = ({
     >
       <div className='flex gap-5 h-full flex-col sm:flex-row '>
         <div className='relative md:w-64 h-32 gap-3 md:h-auto overflow-hidden flex justify-between w-full'>
+          {game.isNew && (
+            <div className='absolute top-2 left-2 p-2 rounded-sm bg-surface-secondary z-10'>
+              <span className='text-xs text-icon-active'>NEW</span>
+            </div>
+          )}
           <Image
             src={game.image}
             alt={game.name}

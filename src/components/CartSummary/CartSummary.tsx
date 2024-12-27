@@ -34,7 +34,7 @@ export const CartSummary = ({ games }: CartSummaryProps) => {
               Order Total
             </h3>
             <h3 className='text-xl text-cta-stroke-primary font-bold'>
-              ${games.reduce((acc, game) => acc + game.price, 0)}
+              ${games.reduce((acc, game) => acc + game.price, 0).toFixed(2)}
             </h3>
           </div>
         </div>

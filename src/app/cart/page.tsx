@@ -17,7 +17,7 @@ const CartPage = () => {
   return (
     <div className='flex flex-col gap-12 mx-auto px-4 md:max-w-screen-desktop-xl min-h-[80dvh]'>
       <Back backTo='Catalog' href='/' />
-      <div className='py-12'>
+      <section className='py-12'>
         {cartGames && cartGames.length === 0 && (
           <div className='flex gap-3 w-full text-center px-4 flex-col mx-auto md:max-w-screen-desktop-xl max-w-screen-mobile border rounded-lg py-4 border-stroke-secondary'>
             <h1 className='text-4xl text-cta-stroke-primary font-bold'>
@@ -49,7 +49,7 @@ const CartPage = () => {
             </div>
           </>
         )}
-      </div>
+      </section>
     </div>
   );
 };
